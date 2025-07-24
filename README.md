@@ -22,15 +22,15 @@ A comprehensive Python-based graphical tool designed to detect network interfere
 A quick look at the SIC GUI in action, from configuration to the final summary report.
 
 <p align="center">
-  <img src="./assets/images/sic-gui-demo.gif" alt="SIC GUI Demo">
+  <img src="./images/sic-gui-demo.gif" alt="SIC GUI Demo">
 </p>
 
 Here are some key parts of the interface:
 
 <p align="center">
-  <img src="./assets/images/main-interface.png" alt="Main GUI Interface" width="48%">
+  <img src="./images/main-interface.png" alt="Main GUI Interface" width="48%">
   &nbsp; &nbsp;
-  <img src="./assets/images/summary-report.png" alt="Detailed Scan Summary" width="48%">
+  <img src="./images/summary-report.png" alt="Detailed Scan Summary" width="48%">
 </p>
 
 ---

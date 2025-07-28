@@ -1,5 +1,7 @@
 # Scan Interference Checker (SIC) GUI AKA TheMagicButton
 
+[![Python Application Tests](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml/badge.svg)](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml)
+
 **Version:** 1.3.23 (21/07/2025)
 
 A comprehensive Python-based graphical tool designed to detect network interferences such as Firewalls, WAFs, IDS/IPS, Load Balancers, and CDNs. It offers a unique dual-perspective analysis, running tests from both your local machine and a remote SSH hub to provide a complete picture of the target's security posture.
@@ -22,15 +24,21 @@ A comprehensive Python-based graphical tool designed to detect network interfere
 A quick look at the SIC GUI in action, from configuration to the final summary report.
 
 <p align="center">
-  <img src="./images/sic-gui-demo.gif" alt="SIC GUI Demo">
+  <img src="./assets/images/sic-gui-demo.gif" alt="SIC GUI Demo">
 </p>
 
 Here are some key parts of the interface:
 
 <p align="center">
-  <img src="./images/main-interface.png" alt="Main GUI Interface" width="48%">
+  <img src="./assets/previews/main-interface.png" alt="Main GUI Interface" width="48%">
   &nbsp; &nbsp;
-  <img src="./images/summary-report.png" alt="Detailed Scan Summary" width="48%">
+  <img src="./assets/previews/summary-report.png" alt="Detailed Scan Summary" width="48%">
+  &nbsp; &nbsp;
+  <img src="./assets/previews/detailed-log-viewer.png" alt="Detailed Log viewer" width="48%">
+  &nbsp; &nbsp;
+  <img src="./assets/previews/additional-settings.png" alt="Additional Settings" width="48%">
+  &nbsp; &nbsp;
+  <img src="./assets/previews/lrt-viewer.png" alt="LRT Viewer" width="48%">
 </p>
 
 ---
@@ -241,4 +249,9 @@ This was the first major release featuring the full graphical user interface and
 
 ## To-Do List (Next Release)
 
-- [ ] **CLI:** Update the CLI Docker release to match the new features and summary format of the GUI.
+- [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
+- [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
+- [x] **HTTP Method Tampering:** Implemented a new test to detect interference by sending various HTTP methods (`OPTIONS`, `PUT`, etc.) and comparing responses to a `GET` baseline.
+- [x] **Pytest Suite:** Implemented a comprehensive test suite using `pytest` to cover core application logic, including unit tests for parsing functions and integration tests for scan modules.
+- [x] **Continuous Integration:** Set up a GitHub Actions workflow to automatically run all tests on every push and pull request, ensuring code quality and preventing regressions.
+- [x] **Bug Fixes:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability as part of the testing implementation.

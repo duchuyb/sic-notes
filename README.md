@@ -295,9 +295,6 @@ This was the first major release featuring the full graphical user interface and
 
 ---
 
-## 🗒️ To-Do List (Next Release)
----
-
 ## 🤝 Contributing
 
 We welcome contributions in the future! If you are interested in contributing, please check back later for guidelines and how to get involved.
@@ -335,6 +332,8 @@ We welcome contributions in the future! If you are interested in contributing, p
   **Solution:** Try increasing the timeout settings or check your network connection.
 
 ---
+
+## 🗒️ To-Do List (Next Release)
 
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
 - [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)

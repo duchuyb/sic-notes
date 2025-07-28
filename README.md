@@ -124,12 +124,6 @@ A quick look at the SIC GUI in action, from configuration to the final summary r
 
 <!-- Expand this section with more differentiators as needed. -->
 
-*   **Flexible Test Configuration:** Easily enable or disable specific tests and features through the graphical interface. All settings are saved to a persistent `settings.ini` file.
-*   **Remote Hub Management:** Connect to pre-configured SSH hubs or specify a custom IP for remote testing. The tool supports both key-based and SSH-agent authentication.
-*   **In-App Editors:**
-    *   Personalize the tool's aesthetics by modifying the startup banner.
-    *   Define your own sequence of shell commands to be executed on the SSH hub.
-
 ---
 
 ## 🐳 Getting Started with Docker

@@ -24,23 +24,39 @@ A comprehensive Python-based graphical tool designed to detect network interfere
 A quick look at the SIC GUI in action, from configuration to the final summary report.
 
 <p align="center">
-  <img src="./images/sic-gui-demo.gif" alt="SIC GUI Demo">
+  <img src="./images/sic-gui-demo.gif" alt="SIC GUI Demo" width="80%">
 </p>
-
-Here are some key parts of the interface:
 
 <table>
   <tr>
-    <td align="center" width="50%"><img src="./images/main-interface.PNG" alt="Main GUI Interface" width="95%"></td>
-    <td align="center" width="50%"><img src="./images/summary-report.png" alt="Detailed Scan Summary" width="95%"></td>
+    <td align="center" width="50%">
+      🖥️<br><b>Main GUI Interface</b><br>
+      <img src="./images/main-interface.PNG" alt="Main GUI Interface" width="95%">
+    </td>
+    <td align="center" width="50%">
+      📊<br><b>Summary Report</b><br>
+      <img src="./images/summary-report.png" alt="Detailed Scan Summary" width="95%">
+    </td>
   </tr>
   <tr>
-    <td align="center" width="50%"><img src="./images/detailed-log-viewer.png" alt="Detailed Log viewer" width="95%"></td>
-    <td align="center" width="50%"><img src="./images/additional-settings.PNG" alt="Additional Settings" width="95%"></td>
+    <td align="center" width="50%">
+      📜<br><b>Detailed Log Viewer</b><br>
+      <img src="./images/detailed-log-viewer.png" alt="Detailed Log viewer" width="95%">
+    </td>
+    <td align="center" width="50%">
+      ⚙️<br><b>Additional Settings</b><br>
+      <img src="./images/additional-settings.PNG" alt="Additional Settings" width="95%">
+    </td>
   </tr>
   <tr>
-    <td align="center" width="50%"><img src="./images/lrt-viewer.png" alt="LRT Viewer" width="95%"></td>
-    <td align="center" width="50%"><img src="./images/github_actions_pass.PNG" alt="Github Actions Pass Viewer" width="95%"></td>
+    <td align="center" width="50%">
+      🗂️<br><b>LRT Viewer</b><br>
+      <img src="./images/lrt-viewer.png" alt="LRT Viewer" width="95%">
+    </td>
+    <td align="center" width="50%">
+      ✅<br><b>GitHub Actions Pass</b><br>
+      <img src="./images/github_actions_pass.PNG" alt="Github Actions Pass Viewer" width="95%">
+    </td>
   </tr>
 </table>
 

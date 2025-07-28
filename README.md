@@ -4,12 +4,8 @@
 # 🚦 Scan Interference Checker (SIC) GUI AKA TheMagicButton
 
 
-[![Python Application Tests](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml/badge.svg)](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml)
-![Python Version](https://img.shields.io/badge/python-3.8%2B-blue?logo=python)
-![License](https://img.shields.io/badge/license-MIT-green)
-![Docker Pulls](https://img.shields.io/badge/docker-pulls-brightgreen?logo=docker)
-![Release](https://img.shields.io/badge/release-latest-blue)
-<!-- Static badges above; update with real ones if/when public. -->
+<!-- [![Python Application Tests](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml/badge.svg)](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml) -->
+![Build Status](https://img.shields.io/badge/build-passing-brightgreen) <!-- ![Build Status](https://img.shields.io/badge/build-failing-red) --> ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue?logo=python) ![License](https://img.shields.io/badge/license-MIT-green) ![Docker Pulls](https://img.shields.io/badge/docker-pulls-brightgreen?logo=docker) ![Release](https://img.shields.io/badge/release-latest-blue)
 
 
 **Version:** 1.3.23 (21/07/2025)

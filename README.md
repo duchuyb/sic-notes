@@ -31,6 +31,7 @@
 7.  [To-Do List](#to-do-list-next-release)
 8.  [Contributing](#contributing)
 9.  [Troubleshooting & FAQ](#troubleshooting--faq)
+10. [License](#license)
 
 ---
 
@@ -342,3 +343,9 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Pytest Suite:** Implemented a comprehensive test suite using `pytest` to cover core application logic, including unit tests for parsing functions and integration tests for scan modules.
 - [x] **Continuous Integration:** Set up a GitHub Actions workflow to automatically run all tests on every push and pull request, ensuring code quality and preventing regressions.
 - [x] **Bug Fixes:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability as part of the testing implementation.
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE.md file for details.

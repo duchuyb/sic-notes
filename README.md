@@ -297,7 +297,8 @@ This was the first major release featuring the full graphical user interface and
 
 ## 🤝 Contributing
 
-We welcome contributions in the future! If you are interested in contributing, please check back later for guidelines and how to get involved.
+<!-- At the moment, it is solely me managing this project but I may welcome contributions in the future! If you are interested in contributing, please check back later for guidelines and how to get involved. -->
+I may revisit this in the future but at the moment, it is solely managed by myself.
 
 ---
 

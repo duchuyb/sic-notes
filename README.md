@@ -29,19 +29,20 @@ A quick look at the SIC GUI in action, from configuration to the final summary r
 
 Here are some key parts of the interface:
 
-<p align="center">
-  <img src="./images/main-interface.PNG" alt="Main GUI Interface" width="48%">
-  &nbsp; &nbsp;
-  <img src="./images/summary-report.png" alt="Detailed Scan Summary" width="48%">
-  &nbsp; &nbsp;
-  <img src="./images/detailed-log-viewer.png" alt="Detailed Log viewer" width="48%">
-  &nbsp; &nbsp;
-  <img src="./images/additional-settings.PNG" alt="Additional Settings" width="48%">
-  &nbsp; &nbsp;
-  <img src="./images/lrt-viewer.png" alt="LRT Viewer" width="48%">
-  &nbsp; &nbsp;
-  <img src="./images/github_actions_pass.PNG" alt="Github Actions Pass Viewer" width="48%">
-</p>
+<table>
+  <tr>
+    <td align="center" width="50%"><img src="./images/main-interface.PNG" alt="Main GUI Interface" width="95%"></td>
+    <td align="center" width="50%"><img src="./images/summary-report.png" alt="Detailed Scan Summary" width="95%"></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./images/detailed-log-viewer.png" alt="Detailed Log viewer" width="95%"></td>
+    <td align="center" width="50%"><img src="./images/additional-settings.PNG" alt="Additional Settings" width="95%"></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%"><img src="./images/lrt-viewer.png" alt="LRT Viewer" width="95%"></td>
+    <td align="center" width="50%"><img src="./images/github_actions_pass.PNG" alt="Github Actions Pass Viewer" width="95%"></td>
+  </tr>
+</table>
 
 ---
 

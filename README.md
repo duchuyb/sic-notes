@@ -339,6 +339,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability as part of the testing implementation.
 - [x] **Bug Fixes:** Application experiences freezes when left for long periods.
 - [x] **Bug Fixes:** NMap on SSH times out too quickly.
+- [x] **Bug Fixes:** NMap should now correctly output when the test was successful.
 - [x] **Bug Fixes:** SSH Rate limit non-functional with the test release.
 - [x] **Bug Fixes:** You cannot 'Cntrl + C' to copy the contents from the log output.
 - [x] **Bug Fixes:** Logs file can sometimes not include anything useful.

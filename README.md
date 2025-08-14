@@ -337,16 +337,16 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Pytest Suite:** Implemented a comprehensive test suite using `pytest` to cover core application logic, including unit tests for parsing functions and integration tests for scan modules.
 - [x] **Continuous Integration:** Set up a GitHub Actions workflow to automatically run all tests on every push and pull request, ensuring code quality and preventing regressions.
 - [x] **Bug Fixes:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability as part of the testing implementation.
+- [x] **Bug Fixes:** Application experiences freezes when left for long periods.
+- [x] **Bug Fixes:** NMap on SSH times out too quickly.
+- [x] **Bug Fixes:** SSH Rate limit non-functional with the test release.
+- [x] **Bug Fixes:** You cannot 'Cntrl + C' to copy the contents from the log output.
+- [x] **Bug Fixes:** Logs file can sometimes not include anything useful.
+- [x] **Quality of Life:** Wafw00f output when it detects WAF but doesn't know where it's from.
+- [x] **Quality of Life:** Target field doesn't let you press 'Cntrl + A' to select all.
+- [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
 - [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
-- [ ] **Bug Fixes:** Application experiences freezes when left for long periods.
-- [ ] **Bug Fixes:** NMap on SSH times out too quickly.
-- [ ] **Bug Fixes:** SSH Rate limit non-functional with the test release.
-- [ ] **Bug Fixes:** You cannot 'Cntrl + C' to copy the contents from the log output.
-- [ ] **Bug Fixes:** Logs file can sometimes not include anything useful.
-- [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
-- [ ] **Quality of Life:** Wafw00f output when it detects WAF but doesn't know where it's from.
-- [ ] **Quality of Life:** Target field doesn't let you press 'Cntrl + A' to select all.
 - [ ] **New Feature:** LRT should have a working prototype.
 
 

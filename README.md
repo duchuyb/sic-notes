@@ -335,6 +335,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 - [x] **HTTP Method Tampering:** Implemented a new test to detect interference by sending various HTTP methods (`OPTIONS`, `PUT`, etc.) and comparing responses to a `GET` baseline.
 - [x] **Pytest Suite:** Implemented a comprehensive test suite using `pytest` to cover core application logic, including unit tests for parsing functions and integration tests for scan modules.
+- [x] **Pytest Suite:** adjust this once all the new features, bug fixes, QoL changes and code modifications are complete. 
 - [x] **Continuous Integration:** Set up a GitHub Actions workflow to automatically run all tests on every push and pull request, ensuring code quality and preventing regressions.
 - [x] **Bug Fixes:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability as part of the testing implementation.
 - [x] **Bug Fixes:** Application experiences freezes when left for long periods.

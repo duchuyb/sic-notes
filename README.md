@@ -343,6 +343,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **Bug Fixes:** NMap on SSH times out too quickly.
 - [ ] **Bug Fixes:** SSH Rate limit non-functional with the test release.
 - [ ] **Bug Fixes:** You cannot 'Cntrl + C' to copy the contents from the log output.
+- [ ] **Bug Fixes:** Logs file can sometimes not include anything useful.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **Quality of Life:** Wafw00f output when it detects WAF but doesn't know where it's from.
 - [ ] **Quality of Life:** Target field doesn't let you press 'Cntrl + A' to select all.

@@ -352,6 +352,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
 - [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
 - [ ] **New Feature:** LRT should have a working prototype.
+- [ ] **New Feature:** CDN-as-WAF and LB-as-WAF interference; Stronger checks against CDNs and LB WAF behaviour.
 
 
 ---

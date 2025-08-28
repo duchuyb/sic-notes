@@ -8,7 +8,7 @@
 ![Build Status](https://img.shields.io/badge/build-passing-brightgreen) <!-- ![Build Status](https://img.shields.io/badge/build-failing-red) --> ![Python Version](https://img.shields.io/badge/python-3.8%2B-blue?logo=python) ![License](https://img.shields.io/badge/license-MIT-green) ![Docker Pulls](https://img.shields.io/badge/docker-pulls-brightgreen?logo=docker) ![Release](https://img.shields.io/badge/release-latest-blue)
 
 
-**Version:** 1.3.23 (21/07/2025)
+**Version:** 1.4.24 (28/08/2025)
 
 
 🛡️ A comprehensive Python-based graphical tool designed to detect network interferences such as Firewalls, WAFs, IDS/IPS, Load Balancers, and CDNs. It offers a unique dual-perspective analysis, running tests from both your local machine and a remote SSH hub to provide a complete picture of the target's security posture.
@@ -221,6 +221,34 @@ The GUI provides tooltips for each option explaining its purpose in detail.
 
 ## 📝 Changelog
 
+### v1.4.24 (28/08/2025)
+
+This release focuses on adding new detection methods, improving test reliability, and establishing a robust CI/CD pipeline with a comprehensive test suite.
+
+#### ✨ New Features & Enhancements
+*   **HTTP Method Tampering:** Implemented a new test to detect interference by sending various HTTP methods (`OPTIONS`, `PUT`, etc.) and comparing responses to a `GET` baseline.
+*   **CDN-as-WAF & LB-as-WAF Detection:** Introduced stronger checks to identify WAF-like behavior from Content Delivery Networks and Load Balancers.
+*   **LRT Integration:** The Logs Recapture Tool (LRT) now automatically uses the username and private key specified in the main application settings.
+
+#### 🐛 Bug Fixes & Performance
+*   **Detection Logic:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability.
+*   **Application Stability:** Resolved an issue causing the application to freeze when left idle for extended periods.
+*   **Nmap Stability:** Increased the timeout for Nmap scans on the SSH hub to prevent premature termination and ensure successful tests are reported correctly.
+*   **SSH Rate-Limit:** Addressed an issue where the remote rate-limit test was non-functional.
+*   **Log Content:** Fixed a bug where log files could be generated with incomplete or missing information.
+
+#### 🎨 UI & UX Improvements
+*   **Log Output Interaction:** Enabled standard copy functionality (`Ctrl+C`) in the main log output text area.
+*   **Target Input:** Enabled "Select All" (`Ctrl+A`) functionality in the target input field for easier editing.
+*   **WAF Detection Output:** Improved `wafw00f` output to provide more context when a WAF is detected but cannot be specifically identified.
+*   **UI Layout:** Re-arranged the "Additional Options" pop-up, replacing the "About Me" button with the "LRT Viewer" button for better accessibility.
+
+#### ⚙️ Development & CI
+*   **Pytest Suite:** Implemented a comprehensive test suite using `pytest` to cover core application logic, including unit tests for parsing functions and integration tests for scan modules.
+*   **Continuous Integration:** Set up a GitHub Actions workflow to automatically run tests on every push and pull request, ensuring code quality and preventing regressions.
+
+---
+
 ### v1.3.23 (21/07/2025)
 
 This release introduces major UI/UX enhancements, more flexible configuration, and significantly improved reporting and logging capabilities.
@@ -333,22 +361,6 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ## 🗒️ To-Do List (Next Release)
 
-- [x] **HTTP Method Tampering:** Implemented a new test to detect interference by sending various HTTP methods (`OPTIONS`, `PUT`, etc.) and comparing responses to a `GET` baseline.
-- [x] **Pytest Suite:** Implemented a comprehensive test suite using `pytest` to cover core application logic, including unit tests for parsing functions and integration tests for scan modules.
-- [x] **Pytest Suite:** adjust this once all the new features, bug fixes, QoL changes and code modifications are complete. 
-- [x] **Continuous Integration:** Set up a GitHub Actions workflow to automatically run all tests on every push and pull request, ensuring code quality and preventing regressions.
-- [x] **Bug Fixes:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability as part of the testing implementation.
-- [x] **Bug Fixes:** Application experiences freezes when left for long periods.
-- [x] **Bug Fixes:** NMap on SSH times out too quickly.
-- [x] **Bug Fixes:** NMap should now correctly output when the test was successful.
-- [x] **Bug Fixes:** SSH Rate limit non-functional with the test release.
-- [x] **Bug Fixes:** You cannot 'Cntrl + C' to copy the contents from the log output.
-- [x] **Bug Fixes:** Logs file can sometimes not include anything useful.
-- [x] **Quality of Life:** Wafw00f output when it detects WAF but doesn't know where it's from.
-- [x] **Quality of Life:** Target field doesn't let you press 'Cntrl + A' to select all.
-- [x] **Quality of Life:** Re-arranged the LRT button to replace the existing about me button (in the additional options pop-up).
-- [x] **New Feature:** CDN-as-WAF and LB-as-WAF interference; Stronger checks against CDNs and LB WAF behaviour.
-- [x] **LRT (Logs Recapture Tool):** Now uses the username and private key specified from the main application.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
 - [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)

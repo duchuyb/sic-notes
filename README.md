@@ -366,6 +366,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
 - [ ] **New Feature:** LRT should have a working prototype.
 - [ ] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
+- [ ] **Bug Fixes:** Regex fails when you add multiple targets.
+- [ ] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
 
 
 ---

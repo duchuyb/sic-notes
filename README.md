@@ -368,7 +368,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
 - [ ] **Bug Fixes:** Regex fails when you add multiple targets.
 - [ ] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
-
+- [ ] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
 
 ---
 

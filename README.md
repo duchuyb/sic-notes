@@ -361,6 +361,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ## 🗒️ To-Do List (Next Release)
 
+- [x] **Qualtiy of Life:** Observe any performance improvements
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
 - [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
@@ -371,7 +372,15 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
 - [ ] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **Local Rate limit:** Want to investigate further into when the status of the port changes from open to closed and the existing checks (normally sends many requests and once it's closed, the rest of the requests are closed).
-- [ ] **Qualtiy of Life:** Observe any performance improvements
+- [ ] **HTTP Header Anomaly Detection:** WAFs and proxies are notorious for "cleaning up" or modifying HTTP headers. By sending carefully crafted headers, you can trick the intermediary into revealing its presence.
+- [ ] **Advanced Differential Probing (enhancing the existing payload tests):** A more robust method is differential probing, which uses multiple baselines to isolate the WAF's behavior from the application's normal behavior.
+- [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
+- [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.
+
+
+Since I am due to leave in a couple of months, I have decided to commit to two major updates. The way I have implemented this application is that it always tries to pull the latest Docker image. However, I am unsure what other types of updates I can make beyond these two major ones, possibly including the LRT tool.
+
+The examples of updates I am looking forward to implementing into SIC will likely be divided into these two phases. They include LRT (finding a manageable way to update this without my intervention), HTTP Header Anomaly Detection, Advanced Differential Probing (enhancing the existing payload tests), TLS Fingerprinting (JA3/JA3S), and IP Geolocation and ASN Analysis.
 
 ---
 

@@ -371,6 +371,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
 - [ ] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **Local Rate limit:** Want to investigate further into when the status of the port changes from open to closed and the existing checks (normally sends many requests and once it's closed, the rest of the requests are closed).
+- [ ] **Qualtiy of Life:** Observe any performance improvements
 
 ---
 

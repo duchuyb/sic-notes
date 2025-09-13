@@ -368,6 +368,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Regex fails when you add multiple targets and ports.
 - [x] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
 - [x] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
+- [x] **Bug Fixes:** About me (I suspect others as well) loads up multiple times after the refactor.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.

@@ -214,7 +214,7 @@ All settings are managed through the GUI and saved to the `settings.ini` file yo
 *   **`[Test Selection]`**: Master toggles to enable or disable major test categories.
 *   **`[Advanced Options]`**: Enable experimental or resource-intensive features.
 *   **`[Basic Authentication]`**: Provide credentials for sites protected by HTTP Basic Auth.
-*   **`LRT Definitions`**: The Logs Recapture Tool (LRT) uses a `lrt_definitions.yaml` file for its analysis. On its first run, the tool will create a default copy of this file in your mounted `/` directory. You can then edit this file directly to add or modify log analysis rules without needing to rebuild the Docker image.
+*   **`LRT Definitions`**: The Logs Recapture Tool (LRT) uses a `lrt_definitions.yaml` file for its analysis. On its first run, the tool will create a default copy of this file in your mounted `logs/` directory. You can then edit this file directly to add or modify log analysis rules without needing to rebuild the Docker image.
 
 The GUI provides tooltips for each option explaining its purpose in detail.
 
@@ -362,6 +362,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ## 🗒️ To-Do List (Next Release)
 
+- [x] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder)
 - [x] **HTTP Header Anomaly Detection:** WAFs and proxies are notorious for "cleaning up" or modifying HTTP headers. By sending carefully crafted headers, you can trick the intermediary into revealing its presence.
 - [x] **Advanced Differential Probing (Payload Test 2.0):** A more robust method is differential probing, which uses multiple baselines to isolate the WAF's behavior from the application's normal behavior.
 - [x] **Quality of Life:** Observe any performance improvements.
@@ -376,7 +377,6 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
-- [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
 - [ ] **Local Rate limit:** Want to investigate further into when the status of the port changes from open to closed and the existing checks (normally sends many requests and once it's closed, the rest of the requests are closed).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

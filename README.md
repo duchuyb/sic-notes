@@ -381,6 +381,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** About me (I suspect others as well) loads up multiple times after the refactor.
 - [x] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
+- [ ] **LRT (Logs Recapture Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

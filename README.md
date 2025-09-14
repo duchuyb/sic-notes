@@ -370,6 +370,10 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Quality of Life:** Refactored the Professional features into it's own category (within the GUI and settings.ini).
 - [x] **Quality of Life:** Renamed the Intermediary WAF test to CDN & LB Filtering Analysis for better clarify.
 - [x] **Quality of Life:** Refactor the GUI into smaller segments.
+- [x] **Quality of Life:** Enhanced the local rate-limit test by providing a much clearer and more actionable diagnosis when a rate-limiting pattern is detected.
+- [x] **Quality of Life:** Enhanced the SSH rate-limit test that provides a much more sophisticated analysis that directly addresses the nature of rate-limiting defenses.
+- [x] **Quality of Life:** CDN & LB Filtering Analysis now includes soft block checks (returns 200 but checks the request body).
+- [x] **Quality of Life:** Improved the detection logic for blocks and rate limits.
 - [x] **Bug Fixes:** Regex fails when you add multiple targets and ports.
 - [x] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
 - [x] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
@@ -377,7 +381,6 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
-- [ ] **Local Rate limit:** Want to investigate further into when the status of the port changes from open to closed and the existing checks (normally sends many requests and once it's closed, the rest of the requests are closed).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.
 

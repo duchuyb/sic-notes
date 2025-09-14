@@ -362,7 +362,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ## 🗒️ To-Do List (Next Release)
 
-- [x] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder)
+- [x] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder).
+- [x] **LRT (Logs Recapture Tool):** Introduced a definitions YAML file for LRT for better maintenance, management and easy-of-use for the insights feature.
 - [x] **HTTP Header Anomaly Detection:** WAFs and proxies are notorious for "cleaning up" or modifying HTTP headers. By sending carefully crafted headers, you can trick the intermediary into revealing its presence.
 - [x] **Advanced Differential Probing (Payload Test 2.0):** A more robust method is differential probing, which uses multiple baselines to isolate the WAF's behavior from the application's normal behaviour.
 - [x] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.

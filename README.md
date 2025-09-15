@@ -382,6 +382,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
+- [ ] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
 - [ ] **LRT (Logs Recapture Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.

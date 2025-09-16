@@ -364,6 +364,18 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 - [x] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder).
 - [x] **LRT (Logs Recapture Tool):** Introduced a definitions YAML file for LRT for better maintenance, management and easy-of-use for the insights feature.
+- [x] **LRT (Logs Recapture Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
+- [x] **LRT (Logs Recapture Tool):** Added a stop option when you run the LRT tool, rather than forcing it to run till the end.
+- [x] **LRT (Logs Recapture Tool):** Added vaildation checks so the instance ID can't be null or empty.
+- [x] **LRT (Logs Recapture Tool):** Added icons to the insight summary.
+- [x] **LRT (Logs Recapture Tool):** Added Grouped option rather than displaying multiple instances straight away.
+- [x] **LRT (Logs Recapture Tool):** Now views all types of logs rather than only `.txt` and `.log`.
+- [x] **LRT (Logs Recapture Tool):** Now extracts all the compressed files into the directories.
+- [x] **LRT (Logs Recapture Tool):** Now seperates all the logs into it's own relevant folder.
+- [x] **LRT (Logs Recapture Tool):** Status bar now included to provide the status of pulling logs etc.
+- [x] **LRT (Logs Recapture Tool):** Open to edit and save the LRT definitions in the UI.
+- [x] **LRT (Logs Recapture Tool):** Save settings option to lrt config is now available.
+- [x] **LRT (Logs Recapture Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
 - [x] **HTTP Header Anomaly Detection:** WAFs and proxies are notorious for "cleaning up" or modifying HTTP headers. By sending carefully crafted headers, you can trick the intermediary into revealing its presence.
 - [x] **Advanced Differential Probing (Payload Test 2.0):** A more robust method is differential probing, which uses multiple baselines to isolate the WAF's behavior from the application's normal behaviour.
 - [x] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
@@ -380,10 +392,10 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
 - [x] **Bug Fixes:** About me (I suspect others as well) loads up multiple times after the refactor.
 - [x] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
+- [x] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
+- [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
-- [ ] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
-- [ ] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
-- [ ] **LRT (Logs Recapture Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
+- [x] **LRT (Logs Recapture Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

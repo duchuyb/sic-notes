@@ -376,6 +376,9 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **LRT (Logs Recapture Tool):** Open to edit and save the LRT definitions in the UI.
 - [x] **LRT (Logs Recapture Tool):** Save settings option to lrt config is now available.
 - [x] **LRT (Logs Recapture Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
+- [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
+- [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
+- [x] **Authentication:** Developed a script for administrators to generate signed access leases.
 - [x] **HTTP Header Anomaly Detection:** WAFs and proxies are notorious for "cleaning up" or modifying HTTP headers. By sending carefully crafted headers, you can trick the intermediary into revealing its presence.
 - [x] **Advanced Differential Probing (Payload Test 2.0):** A more robust method is differential probing, which uses multiple baselines to isolate the WAF's behavior from the application's normal behaviour.
 - [x] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
@@ -395,7 +398,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
 - [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
-- [x] **LRT (Logs Recapture Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
+- [ ] **LRT (Logs Recapture Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
+- [ ] **LRT (Logs Recapture Tool):** Provide a UI for adding entries to the lrt definitions.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

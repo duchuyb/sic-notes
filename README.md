@@ -400,6 +400,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **LRT (Logs Recapture Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
 - [ ] **LRT (Logs Recapture Tool):** Provide a UI for adding entries to the lrt definitions.
+- [ ] **LRT (Logs Recapture Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
+- [ ] **LRT (Logs Recapture Tool):** I need to review the keyboard shortcut ability, At the moment it won't let you graciously perform cntrl+C, cntrl+v in the LRT definitions and worth reviewing for output (for copying).
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

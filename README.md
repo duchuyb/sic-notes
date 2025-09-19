@@ -214,7 +214,7 @@ All settings are managed through the GUI and saved to the `settings.ini` file yo
 *   **`[Test Selection]`**: Master toggles to enable or disable major test categories.
 *   **`[Advanced Options]`**: Enable experimental or resource-intensive features.
 *   **`[Basic Authentication]`**: Provide credentials for sites protected by HTTP Basic Auth.
-*   **`LRT Definitions`**: The Logs Recapture Tool (LRT) uses a `lrt_definitions.yaml` file for its analysis. On its first run, the tool will create a default copy of this file in your mounted `logs/` directory. You can then edit this file directly to add or modify log analysis rules without needing to rebuild the Docker image.
+*   **`LRT Definitions`**: The Logs Reporting Tool (LRT) uses a `lrt_definitions.yaml` file for its analysis. On its first run, the tool will create a default copy of this file in your mounted `logs/` directory. You can then edit this file directly to add or modify log analysis rules without needing to rebuild the Docker image.
 
 The GUI provides tooltips for each option explaining its purpose in detail.
 
@@ -229,7 +229,7 @@ This release focuses on adding new detection methods, improving test reliability
 #### ✨ New Features & Enhancements
 *   **HTTP Method Tampering:** Implemented a new test to detect interference by sending various HTTP methods (`OPTIONS`, `PUT`, etc.) and comparing responses to a `GET` baseline.
 *   **CDN-as-WAF & LB-as-WAF Detection:** Introduced stronger checks to identify WAF-like behavior from Content Delivery Networks and Load Balancers.
-*   **LRT Integration:** The Logs Recapture Tool (LRT) now automatically uses the username and private key specified in the main application settings.
+*   **LRT Integration:** The Logs Reporting Tool (LRT) now automatically uses the username and private key specified in the main application settings.
 
 #### 🐛 Bug Fixes & Performance
 *   **Detection Logic:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability.
@@ -362,20 +362,20 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ## 🗒️ To-Do List (Next Release)
 
-- [x] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder).
-- [x] **LRT (Logs Recapture Tool):** Introduced a definitions YAML file for LRT for better maintenance, management and easy-of-use for the insights feature.
-- [x] **LRT (Logs Recapture Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
-- [x] **LRT (Logs Recapture Tool):** Added a stop option when you run the LRT tool, rather than forcing it to run till the end.
-- [x] **LRT (Logs Recapture Tool):** Added vaildation checks so the instance ID can't be null or empty.
-- [x] **LRT (Logs Recapture Tool):** Added icons to the insight summary.
-- [x] **LRT (Logs Recapture Tool):** Added Grouped option rather than displaying multiple instances straight away.
-- [x] **LRT (Logs Recapture Tool):** Now views all types of logs rather than only `.txt` and `.log`.
-- [x] **LRT (Logs Recapture Tool):** Now extracts all the compressed files into the directories.
-- [x] **LRT (Logs Recapture Tool):** Now seperates all the logs into it's own relevant folder.
-- [x] **LRT (Logs Recapture Tool):** Status bar now included to provide the status of pulling logs etc.
-- [x] **LRT (Logs Recapture Tool):** Open to edit and save the LRT definitions in the UI.
-- [x] **LRT (Logs Recapture Tool):** Save settings option to lrt config is now available.
-- [x] **LRT (Logs Recapture Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
+- [x] **LRT (Logs Reporting Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder).
+- [x] **LRT (Logs Reporting Tool):** Introduced a definitions YAML file for LRT for better maintenance, management and easy-of-use for the insights feature.
+- [x] **LRT (Logs Reporting Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
+- [x] **LRT (Logs Reporting Tool):** Added a stop option when you run the LRT tool, rather than forcing it to run till the end.
+- [x] **LRT (Logs Reporting Tool):** Added vaildation checks so the instance ID can't be null or empty.
+- [x] **LRT (Logs Reporting Tool):** Added icons to the insight summary.
+- [x] **LRT (Logs Reporting Tool):** Added Grouped option rather than displaying multiple instances straight away.
+- [x] **LRT (Logs Reporting Tool):** Now views all types of logs rather than only `.txt` and `.log`.
+- [x] **LRT (Logs Reporting Tool):** Now extracts all the compressed files into the directories.
+- [x] **LRT (Logs Reporting Tool):** Now seperates all the logs into it's own relevant folder.
+- [x] **LRT (Logs Reporting Tool):** Status bar now included to provide the status of pulling logs etc.
+- [x] **LRT (Logs Reporting Tool):** Open to edit and save the LRT definitions in the UI.
+- [x] **LRT (Logs Reporting Tool):** Save settings option to lrt config is now available.
+- [x] **LRT (Logs Reporting Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
 - [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
 - [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
 - [x] **Authentication:** Developed a script for administrators to generate signed access leases.
@@ -398,10 +398,11 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
 - [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
-- [ ] **LRT (Logs Recapture Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
-- [ ] **LRT (Logs Recapture Tool):** Provide a UI for adding entries to the lrt definitions.
-- [ ] **LRT (Logs Recapture Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
-- [ ] **LRT (Logs Recapture Tool):** I need to review the keyboard shortcut ability, At the moment it won't let you graciously perform cntrl+C, cntrl+v in the LRT definitions and worth reviewing for output (for copying).
+- [ ] **LRT (Logs Reporting Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
+- [ ] **LRT (Logs Reporting Tool):** Provide a UI for adding entries to the lrt definitions.
+- [ ] **LRT (Logs Reporting Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
+- [ ] **LRT (Logs Reporting Tool):** I need to review the keyboard shortcut ability, At the moment it won't let you graciously perform cntrl+C, cntrl+v in the LRT definitions and worth reviewing for output (for copying).
+- [ ] **LRT (Logs Reporting Tool):** I will rename this to Logs Reporting Tool from Logs Recapture tool, as the focus is more towards providing + collecting + analysing logs.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

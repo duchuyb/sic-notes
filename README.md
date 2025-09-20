@@ -214,6 +214,7 @@ All settings are managed through the GUI and saved to the `settings.ini` file yo
 *   **`[Test Selection]`**: Master toggles to enable or disable major test categories.
 *   **`[Advanced Options]`**: Enable experimental or resource-intensive features.
 *   **`[Basic Authentication]`**: Provide credentials for sites protected by HTTP Basic Auth.
+*   **`LRT Definitions`**: The Logs Reporting Tool (LRT) uses a `lrt_definitions.yaml` file for its analysis. On its first run, the tool will create a default copy of this file in your mounted `logs/` directory. You can then edit this file directly to add or modify log analysis rules without needing to rebuild the Docker image.
 
 The GUI provides tooltips for each option explaining its purpose in detail.
 
@@ -228,7 +229,7 @@ This release focuses on adding new detection methods, improving test reliability
 #### ✨ New Features & Enhancements
 *   **HTTP Method Tampering:** Implemented a new test to detect interference by sending various HTTP methods (`OPTIONS`, `PUT`, etc.) and comparing responses to a `GET` baseline.
 *   **CDN-as-WAF & LB-as-WAF Detection:** Introduced stronger checks to identify WAF-like behavior from Content Delivery Networks and Load Balancers.
-*   **LRT Integration:** The Logs Recapture Tool (LRT) now automatically uses the username and private key specified in the main application settings.
+*   **LRT Integration:** The Logs Reporting Tool (LRT) now automatically uses the username and private key specified in the main application settings.
 
 #### 🐛 Bug Fixes & Performance
 *   **Detection Logic:** Corrected detection logic for `wafw00f` and `nmap` to improve accuracy and reliability.
@@ -359,17 +360,77 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ---
 
-## 🗒️ To-Do List (Next Release)
+## 🗒️ To-Do List (Next Release) - planned Version: 1.5.25
 
+- [x] **LRT (Logs Reporting Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder).
+- [x] **LRT (Logs Reporting Tool):** Introduced a definitions YAML file for LRT for better maintenance, management and easy-of-use for the insights feature.
+- [x] **LRT (Logs Reporting Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
+- [x] **LRT (Logs Reporting Tool):** Added a stop option when you run the LRT tool, rather than forcing it to run till the end.
+- [x] **LRT (Logs Reporting Tool):** Major optimisation for Large log files, from O(lines * definitions) to O(lines).
+- [x] **LRT (Logs Reporting Tool):** Major performance optimisation by adding concurrency and parallelism to boost performance.
+- [x] **LRT (Logs Reporting Tool):** Added vaildation checks so the instance ID can't be null or empty.
+- [x] **LRT (Logs Reporting Tool):** Added icons to the insight summary.
+- [x] **LRT (Logs Reporting Tool):** Includes many performance and memory optimisations.
+- [x] **LRT (Logs Reporting Tool):** Added Grouped option rather than displaying multiple instances straight away.
+- [x] **LRT (Logs Reporting Tool):** Now views all types of logs rather than only `.txt` and `.log`.
+- [x] **LRT (Logs Reporting Tool):** Now extracts all the compressed files into the directories.
+- [x] **LRT (Logs Reporting Tool):** Now seperates all the logs into it's own relevant folder.
+- [x] **LRT (Logs Reporting Tool):** Status bar now included to provide the status of pulling logs etc.
+- [x] **LRT (Logs Reporting Tool):** Open to edit and save the LRT definitions in the UI.
+- [x] **LRT (Logs Reporting Tool):** Save settings option to lrt config is now available.
+- [x] **LRT (Logs Reporting Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
+- [x] **LRT (Logs Reporting Tool):** Added a "Copy to Clipboard" button for grouped and individual instances of the findings.
+- [x] **LRT (Logs Reporting Tool):** Added a search bar to filter the LRT findings and a clear button for convenience.
+- [x] **LRT (Logs Reporting Tool):** Added the ability to save and load different search filters in the LRT tool.
+- [x] **LRT (Logs Reporting Tool):** Added Theshold options in the UI and settings file to further optimise the performance of LRT.
+- [x] **LRT (Logs Reporting Tool):** Added a 'load more' and 'load all' option ("lazy approach") to optimise the LRT run function.
+- [x] **LRT (Logs Reporting Tool):** Added tooltips to the new theshold settings (and others) to explain what they do.
+- [x] **LRT (Logs Reporting Tool):** I will rename this to Logs Reporting Tool from Logs Recapture tool, as the focus is more towards providing + collecting + analysing logs.
+- [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
+- [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
+- [x] **Authentication:** Developed a script for administrators to generate signed access leases.
+- [x] **HTTP Header Anomaly Detection:** WAFs and proxies are notorious for "cleaning up" or modifying HTTP headers. By sending carefully crafted headers, you can trick the intermediary into revealing its presence.
+- [x] **Advanced Differential Probing (Payload Test 2.0):** A more robust method is differential probing, which uses multiple baselines to isolate the WAF's behavior from the application's normal behaviour.
+- [x] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
+- [x] **Quality of Life:** Observe any performance improvements.
+- [x] **Quality of Life:** Refactored the Professional features into it's own category (within the GUI and settings.ini).
+- [x] **Quality of Life:** Renamed the Intermediary WAF test to CDN & LB Filtering Analysis for better clarify.
+- [x] **Quality of Life:** Refactor the GUI into smaller segments.
+- [x] **Quality of Life:** Enhanced the local rate-limit test by providing a much clearer and more actionable diagnosis when a rate-limiting pattern is detected.
+- [x] **Quality of Life:** Enhanced the SSH rate-limit test that provides a much more sophisticated analysis that directly addresses the nature of rate-limiting defenses.
+- [x] **Quality of Life:** CDN & LB Filtering Analysis now includes soft block checks (returns 200 but checks the request body).
+- [x] **Quality of Life:** Improved the detection logic for blocks and rate limits.
+- [x] **Bug Fixes:** Regex fails when you add multiple targets and ports.
+- [x] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
+- [x] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
+- [x] **Bug Fixes:** About me (I suspect others as well) loads up multiple times after the refactor.
+- [x] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
+- [x] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
+- [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
+- [x] **Bug Fixes:** (LRT) Resolved a bug where the application crashes after you run the tool a few times in a row.
+- [x] **Bug Fixes:** (LRT) Resolved a bug where it would not close or exit gracefully
+- [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
+- [ ] **New Feature:** That provides a more comprehensive check for rate limiting.
+- [ ] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
+- [ ] **LRT (Logs Reporting Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
+- [ ] **LRT (Logs Reporting Tool):** Provide a UI for adding entries to the lrt definitions.
+- [ ] **LRT (Logs Reporting Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
+- [ ] **LRT (Logs Reporting Tool):** I need to review the keyboard shortcut ability, At the moment it won't let you graciously perform cntrl+C, cntrl+v in the LRT definitions and worth reviewing for output (for copying).
+- [ ] **LRT (Logs Reporting Tool):** QoL change where there should be a check whether there are files that exist within those paths, if we know there is nothing to download then LRT should not run.
+- [ ] **LRT (Logs Reporting Tool):** Saved the results of an LRT in a way that would allow you to observe previous results.
+- [ ] **LRT (Logs Reporting Tool):** I want to include an option in the lrt defintions to potential ignore a rule.
+- [ ] **LRT (Logs Reporting Tool):** The mouse scroll does not move the scroll bar on the right hand side of LRT.
+- [ ] **LRT (Logs Reporting Tool):** Once the extraction is complete, it should delete the compressed files automatically.
+- [ ] **LRT (Logs Reporting Tool):** Need an easy way (can possibly combine this with something else) to delete previous instances/old logs.
+- [ ] **LRT (Logs Reporting Tool):** Add colours to the grouped findings, according to the severity.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
-- [ ] **Code Coverage:** Integrate a code coverage tool (like `pytest-cov`) into the CI pipeline to measure test effectiveness.
-- [ ] **LRT (Logs Recapture Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `lrt` folder)
-- [ ] **New Feature:** LRT should have a working prototype.
-- [ ] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
-- [ ] **Bug Fixes:** Regex fails when you add multiple targets.
-- [ ] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
-- [ ] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
-- [ ] **Local Rate limit:** Want to investigate further into when the status of the port changes from open to closed and the existing checks (normally sends many requests and once it's closed, the rest of the requests are closed).
+- [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
+- [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.
+
+
+Since I am due to leave in a couple of months, I have decided to commit to two major updates. The first of these updates has introduced several new detection modules, including major advancements to the Logs Reporting Tool (LRT), HTTP Header Anomaly Detection, and an advanced differential probing engine (Payload Test 2.0).
+
+The next major update will focus on the remaining items on the to-do list, such as TLS Fingerprinting and IP Geolocation analysis. The application is designed to always pull the latest Docker image, ensuring users receive these updates automatically.
 
 ---
 

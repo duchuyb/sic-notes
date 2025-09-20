@@ -360,14 +360,17 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 
 ---
 
-## 🗒️ To-Do List (Next Release)
+## 🗒️ To-Do List (Next Release) - planned Version: 1.5.25
 
 - [x] **LRT (Logs Reporting Tool):** Full implementation of a tool that captures logs and automatically attempts to find meaning (in a seperate `logs/` folder).
 - [x] **LRT (Logs Reporting Tool):** Introduced a definitions YAML file for LRT for better maintenance, management and easy-of-use for the insights feature.
 - [x] **LRT (Logs Reporting Tool):** Need to adapt built in mechanisms that will produce a lrt folder and config file if the user is pulling from docker.
 - [x] **LRT (Logs Reporting Tool):** Added a stop option when you run the LRT tool, rather than forcing it to run till the end.
+- [x] **LRT (Logs Reporting Tool):** Major optimisation for Large log files, from O(lines * definitions) to O(lines).
+- [x] **LRT (Logs Reporting Tool):** Major performance optimisation by adding concurrency and parallelism to boost performance.
 - [x] **LRT (Logs Reporting Tool):** Added vaildation checks so the instance ID can't be null or empty.
 - [x] **LRT (Logs Reporting Tool):** Added icons to the insight summary.
+- [x] **LRT (Logs Reporting Tool):** Includes many performance and memory optimisations.
 - [x] **LRT (Logs Reporting Tool):** Added Grouped option rather than displaying multiple instances straight away.
 - [x] **LRT (Logs Reporting Tool):** Now views all types of logs rather than only `.txt` and `.log`.
 - [x] **LRT (Logs Reporting Tool):** Now extracts all the compressed files into the directories.
@@ -376,7 +379,13 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **LRT (Logs Reporting Tool):** Open to edit and save the LRT definitions in the UI.
 - [x] **LRT (Logs Reporting Tool):** Save settings option to lrt config is now available.
 - [x] **LRT (Logs Reporting Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
-- [x] **LRT (Logs Reporting Tool):** added a "Copy to Clipboard" button for grouped and individual instances of the findings.
+- [x] **LRT (Logs Reporting Tool):** Added a "Copy to Clipboard" button for grouped and individual instances of the findings.
+- [x] **LRT (Logs Reporting Tool):** Added a search bar to filter the LRT findings and a clear button for convenience.
+- [x] **LRT (Logs Reporting Tool):** Added the ability to save and load different search filters in the LRT tool.
+- [x] **LRT (Logs Reporting Tool):** Added Theshold options in the UI and settings file to further optimise the performance of LRT.
+- [x] **LRT (Logs Reporting Tool):** Added a 'load more' and 'load all' option ("lazy approach") to optimise the LRT run function.
+- [x] **LRT (Logs Reporting Tool):** Added tooltips to the new theshold settings (and others) to explain what they do.
+- [x] **LRT (Logs Reporting Tool):** I will rename this to Logs Reporting Tool from Logs Recapture tool, as the focus is more towards providing + collecting + analysing logs.
 - [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
 - [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
 - [x] **Authentication:** Developed a script for administrators to generate signed access leases.
@@ -398,12 +407,22 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Investigate cURL output as it appears to sometimes not display the whole response.
 - [x] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
 - [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
+- [x] **Bug Fixes:** (LRT) Resolved a bug where the application crashes after you run the tool a few times in a row.
+- [x] **Bug Fixes:** (LRT) Resolved a bug where it would not close or exit gracefully
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
+- [x] **New Feature:** That provides a more comprehensive check for rate limiting.
+- [x] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
 - [ ] **LRT (Logs Reporting Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
 - [ ] **LRT (Logs Reporting Tool):** Provide a UI for adding entries to the lrt definitions.
 - [ ] **LRT (Logs Reporting Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
 - [ ] **LRT (Logs Reporting Tool):** I need to review the keyboard shortcut ability, At the moment it won't let you graciously perform cntrl+C, cntrl+v in the LRT definitions and worth reviewing for output (for copying).
-- [ ] **LRT (Logs Reporting Tool):** I will rename this to Logs Reporting Tool from Logs Recapture tool, as the focus is more towards providing + collecting + analysing logs.
+- [ ] **LRT (Logs Reporting Tool):** QoL change where there should be a check whether there are files that exist within those paths, if we know there is nothing to download then LRT should not run.
+- [ ] **LRT (Logs Reporting Tool):** Saved the results of an LRT in a way that would allow you to observe previous results.
+- [ ] **LRT (Logs Reporting Tool):** I want to include an option in the lrt defintions to potential ignore a rule.
+- [ ] **LRT (Logs Reporting Tool):** The mouse scroll does not move the scroll bar on the right hand side of LRT.
+- [ ] **LRT (Logs Reporting Tool):** Once the extraction is complete, it should delete the compressed files automatically.
+- [ ] **LRT (Logs Reporting Tool):** Need an easy way (can possibly combine this with something else) to delete previous instances/old logs.
+- [ ] **LRT (Logs Reporting Tool):** Add colours to the grouped findings, according to the severity.
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

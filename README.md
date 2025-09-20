@@ -386,6 +386,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **LRT (Logs Reporting Tool):** Added a 'load more' and 'load all' option ("lazy approach") to optimise the LRT run function.
 - [x] **LRT (Logs Reporting Tool):** Added tooltips to the new theshold settings (and others) to explain what they do.
 - [x] **LRT (Logs Reporting Tool):** I will rename this to Logs Reporting Tool from Logs Recapture tool, as the focus is more towards providing + collecting + analysing logs.
+- [x] **LRT (Logs Reporting Tool):** Implement the Instance ID history feature (user's often re-analyse the same instance ID, this is for convenience).
+- [x] **LRT (Logs Reporting Tool):** As well as status bar, include a visualprogress bar for analysis.
 - [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
 - [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
 - [x] **Authentication:** Developed a script for administrators to generate signed access leases.
@@ -400,6 +402,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Quality of Life:** Enhanced the SSH rate-limit test that provides a much more sophisticated analysis that directly addresses the nature of rate-limiting defenses.
 - [x] **Quality of Life:** CDN & LB Filtering Analysis now includes soft block checks (returns 200 but checks the request body).
 - [x] **Quality of Life:** Improved the detection logic for blocks and rate limits.
+- [x] **Quality of Life:** Change the name from Scan Interference Checker to Scan interference Confirmer as it directly addresses the administrative need to confirm or validate that a WAF or IDS is interfering with traffic.
 - [x] **Bug Fixes:** Regex fails when you add multiple targets and ports.
 - [x] **Bug Fixes:** Pop-up Summary takes precedence until you close (this shouldn't happen).
 - [x] **Bug Fixes:** Target port appears to force 443, needs to investigate further.
@@ -412,6 +415,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **New Feature:** That provides a more comprehensive check for rate limiting.
 - [ ] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
+- [ ] **New Feature:** (SIC) Preset filters/profiles that aims to optimise scans based on what you're targetting and how thorough you want it to be.
 - [ ] **LRT (Logs Reporting Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
 - [ ] **LRT (Logs Reporting Tool):** Provide a UI for adding entries to the lrt definitions.
 - [ ] **LRT (Logs Reporting Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
@@ -423,6 +427,9 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **LRT (Logs Reporting Tool):** Once the extraction is complete, it should delete the compressed files automatically.
 - [ ] **LRT (Logs Reporting Tool):** Need an easy way (can possibly combine this with something else) to delete previous instances/old logs.
 - [ ] **LRT (Logs Reporting Tool):** Add colours to the grouped findings, according to the severity.
+- [ ] **LRT (Logs Reporting Tool):** The LRT window takes precedence over other windows, such as SIC gui. want to possibly remove this focus or priority.
+- [ ] **LRT (Logs Reporting Tool):** Refactor LRT as the GUI is becoming large.
+- [ ] **LRT (Logs Reporting Tool):** The severity filter and other filter options: This shouild require the user to click on a button to perform the action, at the moment having it adapt and react in real life is having negative side effects. 
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.

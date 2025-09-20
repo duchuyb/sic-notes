@@ -410,8 +410,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** (LRT) Resolved a bug where the application crashes after you run the tool a few times in a row.
 - [x] **Bug Fixes:** (LRT) Resolved a bug where it would not close or exit gracefully
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
-- [x] **New Feature:** That provides a more comprehensive check for rate limiting.
-- [x] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
+- [ ] **New Feature:** That provides a more comprehensive check for rate limiting.
+- [ ] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
 - [ ] **LRT (Logs Reporting Tool):** I want to add option to apply regex to multiple files to provide insight (might be complex).
 - [ ] **LRT (Logs Reporting Tool):** Provide a UI for adding entries to the lrt definitions.
 - [ ] **LRT (Logs Reporting Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
@@ -428,9 +428,9 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **IP Geolocation and ASN Analysis.:** This technique enhances the existing load balancer and CDN detection by adding network-level intelligence.
 
 
-Since I am due to leave in a couple of months, I have decided to commit to two major updates. The way I have implemented this application is that it always tries to pull the latest Docker image. However, I am unsure what other types of updates I can make beyond these two major ones, possibly including the LRT tool.
+Since I am due to leave in a couple of months, I have decided to commit to two major updates. The first of these updates has introduced several new detection modules, including major advancements to the Logs Reporting Tool (LRT), HTTP Header Anomaly Detection, and an advanced differential probing engine (Payload Test 2.0).
 
-The examples of updates I am looking forward to implementing into SIC will likely be divided into these two phases. They include LRT (finding a manageable way to update this without my intervention), HTTP Header Anomaly Detection, Advanced Differential Probing (enhancing the existing payload tests), TLS Fingerprinting (JA3/JA3S), and IP Geolocation and ASN Analysis.
+The next major update will focus on the remaining items on the to-do list, such as TLS Fingerprinting and IP Geolocation analysis. The application is designed to always pull the latest Docker image, ensuring users receive these updates automatically.
 
 ---
 

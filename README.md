@@ -376,6 +376,7 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **LRT (Logs Reporting Tool):** Open to edit and save the LRT definitions in the UI.
 - [x] **LRT (Logs Reporting Tool):** Save settings option to lrt config is now available.
 - [x] **LRT (Logs Reporting Tool):** Mechanisms in place where if config or lrt definitions don't exist (also applies to docker), it now creates those files locally.
+- [x] **LRT (Logs Reporting Tool):** added a "Copy to Clipboard" button for grouped and individual instances of the findings.
 - [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
 - [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
 - [x] **Authentication:** Developed a script for administrators to generate signed access leases.

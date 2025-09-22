@@ -1,7 +1,7 @@
 
 <!-- Logo/Banner Placeholder: Add your project logo or banner here in the future -->
 
-# 🚦 Scan Interference Checker (SIC) GUI AKA TheMagicButton
+# 🚦 Scan Interference Confirmer (SIC) - Logs Reporting Tool (LRT)
 
 
 <!-- [![Python Application Tests](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml/badge.svg)](https://github.com/duchuyb/SIC_tool_GUI/actions/workflows/python-tests.yml) -->
@@ -388,6 +388,11 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **LRT (Logs Reporting Tool):** I will rename this to Logs Reporting Tool from Logs Recapture tool, as the focus is more towards providing + collecting + analysing logs.
 - [x] **LRT (Logs Reporting Tool):** Implement the Instance ID history feature (user's often re-analyse the same instance ID, this is for convenience).
 - [x] **LRT (Logs Reporting Tool):** As well as status bar, include a visualprogress bar for analysis.
+- [x] **LRT (Logs Reporting Tool):** Added colour coding to the progress bar.
+- [x] **LRT (Logs Reporting Tool):** The LRT window takes precedence over other windows, such as SIC gui. want to possibly remove this focus or priority.
+- [x] **LRT (Logs Reporting Tool):** Refactor LRT as the GUI is becoming large.
+- [x] **LRT (Logs Reporting Tool):** Add colours to the grouped findings, according to the severity.
+- [x] **LRT (Logs Reporting Tool):** The mouse scroll does not move the scroll bar on the right hand side of LRT.
 - [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
 - [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
 - [x] **Authentication:** Developed a script for administrators to generate signed access leases.
@@ -412,6 +417,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
 - [x] **Bug Fixes:** (LRT) Resolved a bug where the application crashes after you run the tool a few times in a row.
 - [x] **Bug Fixes:** (LRT) Resolved a bug where it would not close or exit gracefully
+- [x] **General:** Apply dark mode to the login page and setup page.
+- [x] **General:** Regarding the users.json, windows user's may need a different process.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
 - [ ] **New Feature:** That provides a more comprehensive check for rate limiting.
 - [ ] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
@@ -421,14 +428,11 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [ ] **LRT (Logs Reporting Tool):** I want to revisit the idea about adding rules, such as regex that applies to folders, or having multiply regex at same time.
 - [ ] **LRT (Logs Reporting Tool):** I need to review the keyboard shortcut ability, At the moment it won't let you graciously perform cntrl+C, cntrl+v in the LRT definitions and worth reviewing for output (for copying).
 - [ ] **LRT (Logs Reporting Tool):** QoL change where there should be a check whether there are files that exist within those paths, if we know there is nothing to download then LRT should not run.
-- [ ] **LRT (Logs Reporting Tool):** Saved the results of an LRT in a way that would allow you to observe previous results.
+- [ ] **LRT (Logs Reporting Tool):** Saved the results of an LRT in a way that would allow you to observe previous results (CSV possibly).
 - [ ] **LRT (Logs Reporting Tool):** I want to include an option in the lrt defintions to potential ignore a rule.
-- [ ] **LRT (Logs Reporting Tool):** The mouse scroll does not move the scroll bar on the right hand side of LRT.
 - [ ] **LRT (Logs Reporting Tool):** Once the extraction is complete, it should delete the compressed files automatically.
 - [ ] **LRT (Logs Reporting Tool):** Need an easy way (can possibly combine this with something else) to delete previous instances/old logs.
-- [ ] **LRT (Logs Reporting Tool):** Add colours to the grouped findings, according to the severity.
-- [ ] **LRT (Logs Reporting Tool):** The LRT window takes precedence over other windows, such as SIC gui. want to possibly remove this focus or priority.
-- [ ] **LRT (Logs Reporting Tool):** Refactor LRT as the GUI is becoming large.
+- [ ] **LRT (Logs Reporting Tool):** Refactor the LRT_GUI to switch to a text-only view if the number of finding groups exceeds a certain threshold.
 - [ ] **LRT (Logs Reporting Tool):** The severity filter and other filter options: This shouild require the user to click on a button to perform the action, at the moment having it adapt and react in real life is having negative side effects. 
 - [ ] **Quality of Life:** Improve the UI presentation of the scan summary (Based on Siji's feedback).
 - [ ] **TLS Fingerprinting (JA3/JA3S):** This is the gold standard for proving that an intermediary is terminating your TLS traffic, which is a fundamental form of interception performed by nearly all modern CDNs and WAFs.

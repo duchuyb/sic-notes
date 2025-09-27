@@ -393,6 +393,8 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **LRT (Logs Reporting Tool):** Refactor LRT as the GUI is becoming large.
 - [x] **LRT (Logs Reporting Tool):** Add colours to the grouped findings, according to the severity.
 - [x] **LRT (Logs Reporting Tool):** The mouse scroll does not move the scroll bar on the right hand side of LRT.
+- [x] **LRT (Logs Reporting Tool):** Increased the size of the input boxes as they are currently not big enough.
+- [x] **LRT (Logs Reporting Tool):** Added a checkbox if the user wants the logs deleted automatically when they close the LRT tool.
 - [x] **Authentication:** Implemented a secure, lease-based authentication system with a web-based login portal. 
 - [x] **Authentication:** Added "Remember Me" functionality for streamlined login. 
 - [x] **Authentication:** Developed a script for administrators to generate signed access leases.
@@ -416,10 +418,16 @@ I may revisit this in the future but at the moment, it is solely managed by myse
 - [x] **Bug Fixes:** The expand option on the top right doesn't display initially until you click on it (once the app loads for the first time on docker).
 - [x] **Bug Fixes:** Need to investigate whether the YAML file that is produced (default template) is syntatically fine.
 - [x] **Bug Fixes:** (LRT) Resolved a bug where the application crashes after you run the tool a few times in a row.
-- [x] **Bug Fixes:** (LRT) Resolved a bug where it would not close or exit gracefully
+- [x] **Bug Fixes:** (LRT) Resolved a bug where it would not close or exit gracefully.
+- [x] **Bug Fixes:**(Previous Runs) Dates were being shown as "Unknown Date".
+- [x] **Bug Fixes:**(definition editor) Fixed a bug where the format would be different when adding new entries.
 - [x] **General:** Apply dark mode to the login page and setup page.
 - [x] **General:** Regarding the users.json, windows user's may need a different process.
+- [x] **General:** improved performance of the existing test suite.
+- [x] **Log Manager:** Remove focus as it doesn't let you use other parts of the application.
+- [x] **Log Manager:** Added a description (tooltip) about each tab does.
 - [x] **Wafw00f:** The test doesn't thoroughly test for WAF when it is generic and but knows there's an active WAF.
+- [x] **Previous Runs:** The 'View' button should now be greyed out (non-clickable) when there are no findings.
 - [ ] **New Feature:** That provides a more comprehensive check for rate limiting.
 - [ ] **New Feature:** That provides a more comprehensive check for WAF presence check (rather than proving the interception), in a way that does this better than wafw00f.
 - [ ] **New Feature:** (SIC) Preset filters/profiles that aims to optimise scans based on what you're targetting and how thorough you want it to be.
